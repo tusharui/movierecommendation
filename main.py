@@ -301,6 +301,11 @@ def health():
     return {"status": "ok"}
 
 
+@app.get("/")
+def home():
+    return {"message": "Movie Recommendation API running"}
+
+
 # ---------- HOME FEED (TMDB) ----------
 @app.get("/home", response_model=List[TMDBMovieCard])
 async def home(
