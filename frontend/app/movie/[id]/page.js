@@ -12,9 +12,9 @@ export default async function MovieDetails({ params }) {
     <div className="p-6">
       <h1 className="text-2xl font-bold">{movie.title}</h1>
 
-      <div className="flex gap-6 mt-4">
+      <div className="flex flex-col md:flex-row gap-6 mt-4">
         {movie.poster_url && (
-          <img className="w-64" src={movie.poster_url} alt={movie.title} />
+          <img className="w-full md:w-64 rounded" src={movie.poster_url} alt={movie.title} />
         )}
 
         <div>
